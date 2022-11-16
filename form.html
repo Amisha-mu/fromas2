@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>responsive-login-page.netlify.app</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="E:\root\pages\f.css" />
+    <script
+      src="https://kit.fontawesome.com/ddf94a11a8.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+  <body class="container-fluid">
+    <div class="row">
+      <div class="col-md-5 mt-lg-5">
+        <div class="box">
+          <br />
+          <form>
+            <h4 id="sign">Sign Into Account</h4>
+            <img
+              src="C:\Users\ASUS\Downloads\logo1.png"
+              class="mx-auto d-block"
+            /><br />
+            <div class="input-group">
+              <span class="input-group-text"
+                ><i class="fa fa-envelope" aria-hidden="true"></i
+              ></span>
+              <input
+                type="Email"
+                id="userEmail"
+                class="form-control"
+                placeholder="E-mail"
+              />
+            </div>
+            <br />
+            <div class="input-group">
+              <span class="input-group-text">
+                <i class="fa fa-lock" aria-hidden="true"></i
+              ></span>
+              <input
+                type="password"
+                class="form-control"
+                id="userPassword"
+                placeholder="Password"
+              />
+            </div>
+            <br />
+            <input type="checkbox" id="keep" name="login" value="login" />
+            <label for="login" id="keep"> Keep Me Logged In</label><br />
+            <button
+              onclick="myFunction()"
+              type="button"
+              class="btn btn-primary mt-3"
+            >
+              <b>Go !</b>
+            </button>
+            <script>
+              function myFunction() {
+                console.log(document.getElementById("userEmail").value);
+                let print;
+                let userEmail = "" + document.getElementById("userEmail").value;
+                let userPassword =
+                  "" + document.getElementById("userPassword").value;
+                if (!userEmail || !userPassword) {
+                  alert("Fill the given details");
+                } else {
+                  alert("Form filled");
+                }
+                document.getElementById("demo").innerHTML = print;
+              }
+            </script>
+            <br />
+            <label
+              id="for"
+              onclick="alert('Reset link sent to your registered e-mail id')"
+              class="mt-3"
+            >
+              <a href="">Forgot Password</a> </label
+            ><br />
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
